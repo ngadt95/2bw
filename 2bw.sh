@@ -17,5 +17,5 @@ sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
 run.sh
 #!/bin/sh
 [ "$#" = "0" ] && 
-echo 'Please enter public key.\nUsage: ./run.sh 831732497809ED0C1B58A59CC0EEA28D56B955093D06E3F012CDFDE8B2597777' && exit 1
+echo 'Please enter public key.\nUsage: ./run.sh YOUR_PUBLIC_KEY' && exit 1
 docker run -d --restart always --cap-add=IPC_LOCK --name="uam-$(date +%s)" -e KEY="$1" ngadt95/crp
