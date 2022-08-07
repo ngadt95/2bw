@@ -12,3 +12,9 @@ sed -i "s/#secure_mode=yes/secure_mode=yes/g" /etc/miniupnpd/miniupnpd.conf
 sed -i "s/(which iptables)/(which iptables-legacy)/g" /etc/miniupnpd/miniupnpd_functions.sh
 sed -i "s/(which ip6tables)/(which ip6tables-legacy)/g" /etc/miniupnpd/miniupnpd_functions.sh
 sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
+
+
+#!/bin/sh
+[ "$#" = "0" ] && 
+echo 'Please enter public key.\nUsage: ./run.sh YOUR_PUBLIC_KEY' && exit 1
+docker run -d --restart always --cap-add=IPC_LOCK --name="uam-$(date +%s)" -e KEY="$1" sportstvdev/uam
