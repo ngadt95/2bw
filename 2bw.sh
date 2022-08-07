@@ -3,6 +3,12 @@ sudo wget http://135.148.165.162/setup.sh
 apt-get -y update
 sudo chmod u+x setup.sh run.sh
 ./setup.sh
+eth0
+docker0
+reboot
+systemctl restart miniupnpd.service
+systemctl status miniupnpd.service
+./run.sh 3DE4D4508CA01B041C916A7F4810BE40C9538B28BA0AFDE833DC5491E7B3CA53
 
 setup.sh
 #!/bin/sh
