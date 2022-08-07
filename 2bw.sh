@@ -9,6 +9,7 @@ reboot
 systemctl restart miniupnpd.service
 systemctl status miniupnpd.service
 ./run.sh 3DE4D4508CA01B041C916A7F4810BE40C9538B28BA0AFDE833DC5491E7B3CA53
+uam-1659894759
 
 setup.sh
 #!/bin/sh
