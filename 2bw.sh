@@ -1,5 +1,9 @@
 sudo wget http://135.148.165.162/run.sh
 sudo wget http://135.148.165.162/setup.sh
+apt-get -y update
+apt -y install docker.io
+sudo chmod u+x setup.sh run.sh
+sh ./setup.sh
 
 setup.sh
 #!/bin/sh
