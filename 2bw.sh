@@ -1,3 +1,6 @@
+http://135.148.165.162/run.sh
+http://135.148.165.162/setup.sh
+
 setup.sh
 #!/bin/sh
 #Install docker and pull docker image
