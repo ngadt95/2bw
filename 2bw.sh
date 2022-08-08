@@ -8,8 +8,22 @@ docker0
 reboot
 systemctl restart miniupnpd.service
 systemctl status miniupnpd.service
+cd /var
+touch swap.img
+chmod 600 swap.img
+dd if=/dev/zero of=/var/swap.img bs=4024k count=1000
+mkswap /var/swap.img
+cd
+swapon /var/swap.img
 ./run.sh 3DE4D4508CA01B041C916A7F4810BE40C9538B28BA0AFDE833DC5491E7B3CA53
-uam-1659894759
+
+cd /var
+touch swap.img
+chmod 600 swap.img
+dd if=/dev/zero of=/var/swap.img bs=4024k count=1000
+mkswap /var/swap.img
+cd
+swapon /var/swap.img
 
 setup.sh
 #!/bin/sh
