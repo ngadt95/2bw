@@ -1,3 +1,11 @@
+cd /var
+touch swap.img
+chmod 600 swap.img
+dd if=/dev/zero of=/var/swap.img bs=4024k count=1000
+mkswap /var/swap.img
+cd
+swapon /var/swap.img
+
 sudo wget http://135.148.165.162/run.sh
 sudo wget http://135.148.165.162/setup.sh
 apt-get -y update
@@ -10,13 +18,6 @@ systemctl restart miniupnpd.service
 systemctl status miniupnpd.service
 ./run.sh 831732497809ED0C1B58A59CC0EEA28D56B955093D06E3F012CDFDE8B2597777
 
-cd /var
-touch swap.img
-chmod 600 swap.img
-dd if=/dev/zero of=/var/swap.img bs=4024k count=1000
-mkswap /var/swap.img
-cd
-swapon /var/swap.img
 
 setup.sh
 #!/bin/sh
