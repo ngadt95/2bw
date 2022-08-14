@@ -13,9 +13,10 @@ sudo chmod u+x setup.sh run.sh
 eth0
 docker0
 reboot
-swapon /var/swap.img
 systemctl restart miniupnpd.service
 systemctl status miniupnpd.service
+
+swapon /var/swap.img
 ./run.sh 831732497809ED0C1B58A59CC0EEA28D56B955093D06E3F012CDFDE8B2597777
 ./run.sh 57D4B88E6BC80DD524DD5CE27F6CD0E48CECB3B67CAE169BC91E698706F22B0D
 
