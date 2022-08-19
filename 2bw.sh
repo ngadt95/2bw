@@ -1,7 +1,7 @@
 cd /var
 touch swap.img
 chmod 600 swap.img
-dd if=/dev/zero of=/var/swap.img bs=4024k count=1000
+dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
 mkswap /var/swap.img
 cd
 swapon /var/swap.img
