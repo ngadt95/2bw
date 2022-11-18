@@ -9,7 +9,7 @@ sudo wget http://103.133.104.125/run.sh
 sudo wget http://103.133.104.125/setup.sh
 apt-get -y update
 sudo chmod u+x setup.sh run.sh
-./setup.sh
+bash ./setup.sh
 eth0
 docker0
 reboot
